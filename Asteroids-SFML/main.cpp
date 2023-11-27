@@ -3,4 +3,6 @@
 
 int main() {
     App* app = App::getInstance();
+
+    app->run();
 }
