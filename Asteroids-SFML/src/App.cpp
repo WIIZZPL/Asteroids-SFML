@@ -2,22 +2,19 @@
 
 #include "Scene.h"
 #include "GameScene.h"
+#include "MenuScene.h"
+#include "HighscoreScene.h"
 
 #define SPT (1/120.0f)
-
-enum class ScenesEnum {
-	GAME
-};
 
 App* App::instance;
 
 App::App() : window(sf::VideoMode(1280, 720), "Asteroids-SFML") {
-
+	srand(time(nullptr));
 	running = false;
 	window.setFramerateLimit(120);
 	
-	setNextSecene(ScenesEnum::GAME);
-	sceneSwitch();
+	setNextSecene(ScenesEnum::MENU);
 }
 
 App::~App() {
@@ -32,6 +29,12 @@ void App::sceneSwitch() {
 	switch (nextScene) {
 	case ScenesEnum::GAME:
 		scene = new GameScene();
+		break;
+	case ScenesEnum::MENU:
+		scene = new MenuScene();
+		break;
+	case ScenesEnum::HIGHSCORES:
+		scene = new HighscoreScene();
 		break;
 	default:
 		exit(555);

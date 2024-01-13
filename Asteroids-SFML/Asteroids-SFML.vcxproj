@@ -96,7 +96,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)inc;$(ProjectDir)SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -130,7 +130,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)inc;$(ProjectDir)SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -142,15 +142,25 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\Asteroid.cpp" />
+    <ClCompile Include="src\Barrier.cpp" />
+    <ClCompile Include="src\Bullet.cpp" />
     <ClCompile Include="src\GameScene.cpp" />
+    <ClCompile Include="src\HighscoreScene.cpp" />
+    <ClCompile Include="src\MenuScene.cpp" />
     <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\Upgrade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Asteroid.h" />
+    <ClInclude Include="inc\Barrier.h" />
+    <ClInclude Include="inc\Bullet.h" />
     <ClInclude Include="inc\GameScene.h" />
+    <ClInclude Include="inc\HighscoreScene.h" />
+    <ClInclude Include="inc\MenuScene.h" />
     <ClInclude Include="inc\Player.h" />
     <ClInclude Include="inc\Scene.h" />
     <ClInclude Include="inc\App.h" />
+    <ClInclude Include="inc\Upgrade.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
